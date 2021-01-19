@@ -1,0 +1,32 @@
+ALGORITHM prob2_Sol2
+VAR
+     hattab : HASH_TABLE<INTEGER,INTEGER>;
+     sumeq,i : INTEGER;
+     tab1,tab2: ARRAY_OF INTEGER[10];
+BEGIN
+    //insert tabs
+    FOR i FROM 0 TO 9 STEP 1  DO
+        write("donner le contenu de la case",i, "du tab1");
+        read(tab1[i]);
+          hattab.insert(tab1[i],1);
+        insert
+        write("donner le contenu de la case",i," du tab2");
+        read(tab2[i]);
+    END_FOR
+    sumeq:=0;
+    //hashing the two tables 3:)
+    FOR i FROM 0 TO tab2.length -1 STEP 1  DO
+        if () then{}
+        IF (hattab.lookup(tab2[i])=true) THEN
+            hattab.insert(tab2[i],2);
+        ELSE
+            hattab.insert(tab2[i],1)
+        END_IF
+    END_FOR
+       FOR i FROM 0 TO tab2.length -1 STEP 1  DO
+       IF (htab.get(tab2[i]) = 2) THEN
+        sumeq= sumeq+ 2*tab2[i];          
+       END_IF
+   END_FOR
+   write(sumeq);
+END

@@ -1,0 +1,23 @@
+ALGORITHM prob2_Sol1
+VAR
+    tab1,tab2: array_name : ARRAY_OF INTEGER[10];
+    i,j,sumeq:INTEGER
+BEGIN
+//insert tabs
+    FOR i FROM 0 TO 9 STEP 1  DO
+        write("donner le contenu de la case",i, "du tab1");
+        read(tab1[i]);
+        write("donner le contenu de la case",i," du tab2");
+        read(tab2[i]);
+    END_FOR
+    //comparing values of the 2 tables
+    FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+        FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+            if (tab1[i]=tab2[j]) then {
+                sumeq= sumeq+ 2*tab1[i];
+            }
+        
+        END_FOR
+    END_FOR
+    write(sumeq);
+END
